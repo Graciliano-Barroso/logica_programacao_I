@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+}
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+}
+
+var limite = parseInt(prompt("Entre com o número par limite"));
+
+var numPar = 2;
+
+while(numPar <= limite) {
+
+    mostra(numPar);
+    numPar = numPar + 2;
+
+}
+
+mostra("FIM");
+
+</script>

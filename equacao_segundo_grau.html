@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<!-- 
+<section style="display: block; ">
+    <div style="display: flex;">
+        <input type="text" name="" id="a" placeholder="a" style="width: 40px; height: 30px; margin: 10px; text-align: center;">
+        <div style="align-self: center;">x elevado a dois</div>
+        <input type="text" name="" id="b" placeholder="b" style="width: 40px; height: 30px; margin: 10px; text-align: center;">
+        <div style="align-self: center;">x</div>
+        <input type="text" name="" id="c" placeholder="c" style="width: 40px; height: 30px; margin: 10px; text-align: center;">
+    </div>
+</section>
+
+<br>
+-->
+
+<script>
+    /*
+    var inputDeA = document.querySelector(".a");
+    console.log(inputDeA);*/
+
+    // 2x2 -3x +2 = 0
+    var a =  parseInt(prompt("Qual o valor de a?"));;
+    var b =  parseInt(prompt("Qual o valor de b?"));;
+    var c =  parseInt(prompt("Qual o valor de c?"));;
+
+    var delta = Math.pow(b, 2) - 4*a*c;    
+
+    var x1 = ((-1)*b + delta) / (2*a);
+    var x2 = ((-1)*b - delta) / (2*a);
+    document.write("x1 = " + x1);
+    document.write("<br>");
+    document.write("x2 = " + x2);
+
+</script>

@@ -1,0 +1,67 @@
+<meta charset="UTF-8">
+
+<h3>JOGO DE ADIVINHAÇÃO</h3>
+
+<input type="text">
+<button>Digite seu chute!</button>
+
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+}
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+}
+
+var numeroPensado = Math.round(Math.random() * 10);
+console.log(numeroPensado);
+
+
+while(numeroPensado == 0) {
+    var numeroPensado = Math.round(Math.random() * 10);
+        var achou = false;    
+        if(numeroPensado !== 0) {
+            achou = true;
+            break;
+        }
+    numeroPensado = 0;
+}
+
+
+var botao = document.querySelector("button");
+botao.onclick = adivinha;
+
+var chute = document.querySelector("input");
+chute.focus();
+
+function adivinha() {
+
+    var achou = false;
+    
+    for(i = 0; i < 3; i++) {        
+        
+        if(chute.value == numeroPensado) {
+            alert("Você acertou!");
+            achou = true;
+            break;
+        }
+           
+        
+    }
+    if(achou == false) {
+        alert("Você errou!");
+    }
+    
+    chute.value = "";
+    chute.focus();
+}
+
+
+</script>
